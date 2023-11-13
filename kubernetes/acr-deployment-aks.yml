@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: acralumno-localdocker-deployment
+  labels:
+    app: acralumno-localdocker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: acralumno-localdocker
+  template:
+    metadata:
+      labels:
+        app: acralumno-localdocker
+    spec:
+      containers:
+        - name: acralumnodemo-localdocker
+         # image: __DOCKER_REPOSITORY__/__IMAGE_NAME__:__IMAGE_TAG__
+          image: aksforacrcoderpath.azurecr.io/coderpath/aks-ms-acralumno:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          resources:
+          limits:
+            cpu: 300m
+            memory: "100Mi"
+          requests:
+            cpu: 100m
+            memory: "50Mi"
