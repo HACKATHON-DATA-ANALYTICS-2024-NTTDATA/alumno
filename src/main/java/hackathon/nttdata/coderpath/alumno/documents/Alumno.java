@@ -16,7 +16,7 @@ import hackathon.nttdata.coderpath.alumno.documents.dtowebclient.Cursos;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "alumno-chatgpt-hackathon-nttdata")
+@Document(collection = "alumno")
 public class Alumno {
 
 	@Id
