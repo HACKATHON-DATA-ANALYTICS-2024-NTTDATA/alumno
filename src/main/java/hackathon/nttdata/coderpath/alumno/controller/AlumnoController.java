@@ -167,7 +167,8 @@ public class AlumnoController {
 			t.setCreateAt(new Date());
 
 		}).onErrorReturn(personalAsset).onErrorResume(e -> Mono.just(personalAsset))
-				.onErrorMap(f -> new InterruptedException(f.getMessage())).subscribe(x -> log.info(x.toString()));
+				.onErrorMap(f -> new InterruptedException(f.getMessage()))
+				.subscribe(x -> log.info(x.toString()));
 
 		Mono<Alumno> newPersonalAsset = service.saveAlumno(personalAsset);
 
