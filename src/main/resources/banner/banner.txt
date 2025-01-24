@@ -50,9 +50,7 @@
 
 INTEGRANTES
 
-
-ALLISON JARA SALAS (DA)
-CARLO DELGADO MARALLANO (fullstack)
+Joffre HErmosilla
 
 
 
